@@ -1,0 +1,70 @@
+
+<!-- 截图发送 -->
+<style>
+    .banner_push>a{color:#899fff;border-bottom:4px solid #899fff; }
+</style>
+<div class="menu">
+    <ul>
+        <@shiro.hasPermission name="0301">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-bookmark push_01"></i>截图推送</a>
+            <ul class="list-child">
+                <@shiro.hasPermission name="030101">
+                <li><a href="${ctxPath}/push/screenshotSend/commerceOne">电一</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="030102">
+                <li><a href="${ctxPath}/push/screenshotSend/commerceTwo">电二</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="030103">
+                <li><a href="${ctxPath}/push/screenshotSend/commerceThree">电三</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="030104">
+                <li><a href="${ctxPath}/push/screenshotSend/hsFlagship">韩束旗舰店</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="030105">
+                <li><a href="${ctxPath}/push/screenshotSend/yyzFlagship">一叶子旗舰店</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="030106">
+                <li><a href="${ctxPath}/push/screenshotSend/brandDynamicSurvey">品牌动态观察群</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="030107">
+                <li><a href="${ctxPath}/push/screenshotSend/bogFlagship">BIO-G旗舰店</a></li>
+                </@shiro.hasPermission>
+
+                <@shiro.hasPermission name="030108">
+                <li><a href="${ctxPath}/push/screenshotSend/elephantRank">红色小象排行</a></li>
+                </@shiro.hasPermission>
+
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <@shiro.hasPermission name="0302">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-bookmark push_02"></i>推送配置</a>
+            <ul class="list-child">
+                <@shiro.hasPermission name="030201">
+                <li><a href="${ctxPath}/push/sysScreenshotCfg">机器人配置</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="030202">
+                <li><a href="${ctxPath}/push/sysScreenshotRecord">推送记录</a></li>
+                </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <!--
+        <@shiro.hasPermission name="0303">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-bookmark push_03"></i>截图发送配置03</a>
+            <ul>
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/push/#">--(待完善)--</a></li>
+                </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+        -->
+
+    </ul>
+</div>

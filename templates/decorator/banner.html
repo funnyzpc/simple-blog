@@ -1,0 +1,68 @@
+<nav class="navbar">
+	<div class="container-fluid">
+
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+				aria-controls="navbar">
+				<span class="sr-only">切换导航</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<#-- <img src="${ctxPath}/static/img/logo_cust.png"> -->
+			<a class="navbar-brand" href="${ctxPath}/main" style="padding: 2px 16px 2px 6px;">
+				<img src="${ctxPath}/static/img/dmc_white.png" style="height:40px;"/>
+				<!-- <strong style="font-size:24px;">DMC</strong> -->
+				<!-- <img src="${ctxPath}/static/img/dmc.png"> -->
+			</a>
+		</div>
+
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul id="navbar-menu" class="nav navbar-nav navbar">
+				<!-- 主页 -->
+				<li data-catalog="${ctxPath}/main" class="banner_main"><a href="${ctxPath}/main">主页</a></li>
+
+				<!-- 主体业务模块 -->
+				<@shiro.hasPermission name="02">
+				<li data-catalog="${ctxPath}/service" class="banner_service"><a href="${ctxPath}/service">数据导入</a></li>
+				</@shiro.hasPermission>
+
+				<@shiro.hasPermission name="03">
+				<li data-catalog="${ctxPath}/push" class="banner_push"><a href="${ctxPath}/push">截图&预览</a></li>
+				</@shiro.hasPermission>
+
+				<@shiro.hasPermission name="05">
+					<li data-catalog="${ctxPath}/spider" class="banner_spider"><a href="${ctxPath}/spider">爬虫监测</a></li>
+				</@shiro.hasPermission>
+
+				<@shiro.hasPermission name="06">
+				<li data-catalog="${ctxPath}/insight" class="banner_insight"><a href="${ctxPath}/insight">业务洞察</a></li>
+				</@shiro.hasPermission>
+
+				<@shiro.hasPermission name="04">
+				<li data-catalog="${ctxPath}/sys" class="banner_sys"><a href="${ctxPath}/sys">系统配置</a></li>
+				</@shiro.hasPermission>
+
+			</ul>
+			<ul id="userinfo" class="nav navbar-nav navbar-right">
+				<#-- <li><p>${sessionScope.user.name}， 你好。</p></li> -->
+				<li><p>
+					<#if Session.user??>
+						<#if Session.user.nick_name??>
+							${Session.user.nick_name}
+						<#else>
+							<@shiro.principal.username/>
+						</#if>
+					<#else>
+						<#-- <@shiro.principal/> -->
+				        <@shiro.principal property="nick_name"/>
+					</#if> 你好(^_^)&nbsp;&nbsp;
+				</p></li>
+				<li><a href="${ctxPath}/changePwd" style="color: #cecece;font-weight: bold;background-color: #1b2243;">修改密码</a></li>
+				<li><a href="${ctxPath}/logout" class="btn-warning" style="line-height:44px">EXIST</a></li>
+			</ul>
+		</div>
+
+	</div>
+</nav>

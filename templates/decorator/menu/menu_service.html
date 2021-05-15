@@ -1,0 +1,267 @@
+
+<!-- 数据导入 -->
+<style>
+    .banner_service>a{color:#899fff;border-bottom:4px solid #899fff; }
+</style>
+<div class="menu">
+    <ul>
+
+        <@shiro.hasPermission name="0208">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-flag service-01"></i>电商一部</a>
+            <ul style="display:none" class="list-child">
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/service/#" title="">天猫旗舰店销售(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/service/#" title="">天猫护肤品排名(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/service/#" title="">天猫彩妆品牌排名(待开发)</a></li>
+                </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <@shiro.hasPermission name="0202">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-flag service-02"></i>电商二部</a>
+            <ul style="display:none" class="list-child">
+                <@shiro.hasPermission name="020204">
+                <li><a href="${ctxPath}/service/#" title="">天猫旗舰店销售(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020205">
+                <li><a href="${ctxPath}/service/#" title="">天猫护肤品排名(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020206">
+                <li><a href="${ctxPath}/service/#" title="">天猫彩妆品牌排名(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020207">
+                <li><a href="${ctxPath}/service/#" title="">电商事业部回款(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020208">
+                <li><a href="${ctxPath}/service/dmEtlShop">C店ETL(日)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020209">
+                <li><a href="${ctxPath}/service/dmEtlShopMonth">C店ETL(月)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020201">
+                <li><a href="${ctxPath}/service/odsShopSource">C店源数据(日)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020202">
+                    <li><a href="${ctxPath}/service/odsShopSourceMonth">C店源数据(月)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020203">
+                    <li><a href="${ctxPath}/service/dimCShopFilter">C店数据白名单</a></li>
+                </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <@shiro.hasPermission name="0203">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-flag service-03"></i>销售信息填报</a>
+            <ul style="display:none" class="list-child">
+                <@shiro.hasPermission name="020301">
+                <li><a href="${ctxPath}/service/salesTarget">销售月目标(盒子)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020302">
+                <li><a href="${ctxPath}/service/salesTargetYear">销售年目标(盒子)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020303">
+                <li><a href="${ctxPath}/service/dmEtlCmsFinancePayment">CMS回款数据</a></li>
+                </@shiro.hasPermission>
+
+                <@shiro.hasPermission name="020304">
+                <li><a href="${ctxPath}/service/odsTianmaoSalesFill" title="销售客单价填报">30天销售客单价</a></li>
+                </@shiro.hasPermission>
+
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <#--
+        <@shiro.hasPermission name="0204">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-flag service-04"></i>销售客单价填报</a>
+            <ul style="display:none" class="list-child">
+                <@shiro.hasPermission name="020401">
+                <li><a href="${ctxPath}/service/#" title="">客单填报(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/service/#" title="">--待完善--</a></li>
+                </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+        -->
+
+        <@shiro.hasPermission name="0201">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-flag service-05"></i>抖音SOP</a>
+            <ul  class="list-child">
+                <@shiro.hasPermission name="020101">
+                <li><a href="${ctxPath}/service/baseProductSeries">产品信息(new)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020102">
+                <li><a href="${ctxPath}/service/odsOemConfig">巨量应用配置</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020103">
+                <li><a href="${ctxPath}/service/dmEtlPlanData">ETL计划日数据</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020104">
+                <li><a href="${ctxPath}/service/dmEtlPlanDataHour">ETL计划小时数据</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020106">
+                <li><a href="${ctxPath}/service/odsUdAdv">UD投放数据</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020107">
+                <li><a href="${ctxPath}/service/dmEtlMaterialData">ETL素材日数据</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020108">
+                <li><a href="${ctxPath}/service/dmEtlMaterialDataHour">ETL素材小时数据</a></li>
+                </@shiro.hasPermission>
+                <!--
+                <@shiro.hasPermission name="020109">
+                <li><a href="${ctxPath}/service/advAccountConfig">巨量主体信息维护</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020110">
+                <li><a href="${ctxPath}/service/advAdvertiserMain">巨量广告主信息维护</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020111">
+                <li><a href="${ctxPath}/service/odsOemAdvertiserMain">巨量授权广告主信息维护</a></li>
+                </@shiro.hasPermission>
+                -->
+
+                <!-- 功能挪至截图&预览
+                <@shiro.hasPermission name="020112">
+                <li><a href="${ctxPath}/service/tiktokSop01Frame">抖音投放日报-韩束</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020113">
+                <li><a href="${ctxPath}/service/tiktokSop02Frame">抖音投放日报-一叶子</a></li>
+                </@shiro.hasPermission>
+                 -->
+
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <@shiro.hasPermission name="0205">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-flag service-06"></i>旗舰店日报</a>
+            <ul style="display:none" class="list-child">
+                <@shiro.hasPermission name="020501">
+                <li><a href="${ctxPath}/service/odsTianmaoTransaction" title="韩束、一叶子">销售日报</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020502">
+                <li><a href="${ctxPath}/service/odsTianmaoStarDaily" title="韩束、一叶子">明星日报</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020503">
+                <li><a href="${ctxPath}/service/odsTianmaoProduct" title="盒子产品信息">日报产品信息</a></li>
+                </@shiro.hasPermission>
+
+                <@shiro.hasPermission name="020504">
+                <li><a href="${ctxPath}/service/dimBrandProductReference">竞品&本品产品信息</a></li>
+                </@shiro.hasPermission>
+<!--                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/service/odsFrSycmCompetitionGoodsTrendInputLaiyuan">竞品产品数据</a></li>
+                </@shiro.hasPermission>-->
+
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <@shiro.hasPermission name="0206">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-flag service-07"></i>京东店铺</a>
+            <ul style="display:none;" class="list-child">
+                <@shiro.hasPermission name="020601">
+                <li><a href="${ctxPath}/service/jdShopRank">京东店铺排行</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020602">
+                <li><a href="${ctxPath}/service/odsJingdongDeal">京东交易</a></li>
+                </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <@shiro.hasPermission name="0207">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-flag service-08"></i>业务基础信息</a>
+            <ul style="display:none;" class="list-child">
+                <@shiro.hasPermission name="020701">
+                <li><a href="${ctxPath}/service/baseShop">店铺信息(盒子)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020702">
+                <li><a href="${ctxPath}/service/baseChannel">渠道信息(盒子)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="020703">
+                <li><a href="${ctxPath}/service/baseBrand">品牌信息(盒子)</a></li>
+                </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <@shiro.hasPermission name="0209">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-flag service-09"></i>回款报表</a>
+            <ul style="display:none;" class="list-child">
+                <@shiro.hasPermission name="020901">
+                    <li><a href="${ctxPath}/service/huikuanDaily">回款日报</a></li>
+                </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <@shiro.hasPermission name="0210">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-flag service-10"></i>天猫店铺排行</a>
+            <ul style="display:none;" class="list-child">
+                <@shiro.hasPermission name="021001">
+                <li><a href="${ctxPath}/service/odsTianmaoCsShopRank" title="原:天猫店铺护肤/彩妆排行报表" data-table="ods_tianmao_cosmetics_skin_rank">天猫店铺品类排行</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="021002">
+                <li><a href="${ctxPath}/service/odsTianmaoCsShopRankTotal" title="原:天猫店铺护肤/彩妆排行汇总报表" data-table="ods_tianmao_cosmetics_skin_rank_total">天猫店铺品类排行汇总</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="021003">
+                <li><a href="${ctxPath}/service/odsTianmaoRedElephant" title="原:红色小象当日/30天客单价(电三用)" data-table="ods_tianmao_red_elephant">红色小象客单价</a></li>
+                </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <@shiro.hasPermission name="0211">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-flag service-11"></i>品牌专营</a>
+            <ul style="display:none;" class="list-child">
+            <@shiro.hasPermission name="021101">
+                <li><a href="${ctxPath}/service/odsTianmaoBrandMonopoly">品牌专营</a></li>
+            </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <@shiro.hasPermission name="0212">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-flag service-12"></i>市场排行</a>
+            <ul style="display:none;" class="list-child">
+                <@shiro.hasPermission name="021201">
+                <li><a href="${ctxPath}/service/odsTianmaoMarketRank">市场排行</a></li>
+            </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <@shiro.hasPermission name="0213">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-flag service-13"></i>批量处理</a>
+            <ul style="display:none;" class="list-child">
+                <@shiro.hasPermission name="021301">
+                <li><a href="${ctxPath}/service/businessDataImport" title="businessDataImport">业务数据导入</a></li>
+            </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+    </ul>
+</div>

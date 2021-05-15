@@ -1,0 +1,56 @@
+
+<!-- 爬虫监测 -->
+<style>
+    .banner_spider>a{color:#899fff;border-bottom:4px solid #899fff; }
+</style>
+<div class="menu">
+    <ul>
+
+        <@shiro.hasPermission name="0501">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-road spider_01"></i>爬虫数据监测</a>
+            <ul class="list-child">
+                <@shiro.hasPermission name="050101">
+                <li><a href="${ctxPath}/spider/yunxiMonitor">云徙数据监控</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/spider/#">报告数据(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/spider/#">生意参谋(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/spider/#">京东商智(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/spider/#">飞瓜数据(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/spider/#">--(待补充)--</a></li>
+                </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+        <@shiro.hasPermission name="0502">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-road spider_02"></i>爬虫任务补偿</a>
+            <ul class="list-child">
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/spider/#">生意参谋任务(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/spider/#">京东商智任务(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/spider/#">飞瓜数据任务(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/spider/#">--(待补充)--</a></li>
+                </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+    </ul>
+</div>

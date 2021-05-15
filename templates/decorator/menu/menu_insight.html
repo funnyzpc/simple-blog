@@ -1,0 +1,93 @@
+<!-- 业务洞察 -->
+<style>
+    .banner_insight > a {color:#899fff;border-bottom:4px solid #899fff; }
+</style>
+<div class="menu">
+    <ul>
+        <@shiro.hasPermission name="0604">
+        <li>
+            <a href="#" class="inactive"><i class="icon-item menu-signal insight_01"></i>抖音投放分析</a>
+            <ul class="list-child">
+                <@shiro.hasPermission name="060401">
+                    <li><a href="${ctxPath}/insight/tiktokPush/weekly_totality">抖音投放周报-总体</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="060402">
+                    <li><a href="${ctxPath}/insight/tiktokPush/weekly_hs">抖音投放周报-韩束</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="060403">
+                    <li><a href="${ctxPath}/insight/tiktokPush/weekly_yyz">抖音投放周报-一叶子</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="060404">
+                    <li><a href="${ctxPath}/insight/tiktokPush/times_hs">抖音投放分时-韩束</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="060405">
+                    <li><a href="${ctxPath}/insight/tiktokPush/times_yyz">抖音投放分时-一叶子</a></li>
+                </@shiro.hasPermission>
+            </ul>
+        </li>
+        </@shiro.hasPermission>
+
+
+        <@shiro.hasPermission name="0601">
+        <li>
+        <a href="#" class="inactive"><i class="icon-item menu-signal insight_02"></i>分析</a>
+            <ul class="list-child">
+                <@shiro.hasPermission name="060101">
+                <li><a href="${ctxPath}/insight/analysis/baby_child_channel">婴童竞品分析-渠道</a></li>
+                </@shiro.hasPermission>
+
+                <@shiro.hasPermission name="dev">
+                    <li><a href="${ctxPath}/insight/#">行业分析(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                    <li><a href="${ctxPath}/insight/#">品类目分析(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                    <li><a href="${ctxPath}/insight/#">品牌分析(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                    <li><a href="${ctxPath}/insight/#">产品库(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                    <li><a href="${ctxPath}/insight/#">备案趋势洞察(待开发)</a></li>
+                </@shiro.hasPermission>
+                <@shiro.hasPermission name="dev">
+                    <li><a href="${ctxPath}/insight/#">--(待完善)--</a></li>
+                </@shiro.hasPermission>
+            </ul>
+    </li>
+    </@shiro.hasPermission>
+
+    <@shiro.hasPermission name="0602">
+    <li>
+    <a href="#" class="inactive"><i class="icon-item menu-signal insight_dev"></i>预测</a>
+    <ul class="list-child">
+        <@shiro.hasPermission name="dev">
+            <li><a href="${ctxPath}/insight/#">--(待完善)--</a></li>
+        </@shiro.hasPermission>
+    </ul>
+    </li>
+    </@shiro.hasPermission>
+
+    <@shiro.hasPermission name="0603">
+    <li>
+    <a href="#" class="inactive"><i class="icon-item menu-signal insight_dev"></i>报告</a>
+        <ul class="list-child">
+            <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/insight/#">外部报告(待开发)</a></li>
+            </@shiro.hasPermission>
+            <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/insight/#">集团内报告(待开发)</a></li>
+            </@shiro.hasPermission>
+            <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/insight/#">组内报告(待开发)</a></li>
+            </@shiro.hasPermission>
+            <@shiro.hasPermission name="dev">
+                <li><a href="${ctxPath}/insight/#">--(待补充)--</a></li>
+            </@shiro.hasPermission>
+        </ul>
+    </li>
+</@shiro.hasPermission>
+
+</ul>
+</div>

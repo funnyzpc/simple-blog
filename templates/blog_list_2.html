@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs</title>
+    <meta name="viewpmort" content="width=device-width,height=device-height,initial-scale=0.8,user-scalable=yes,minimum-scale=0.6,maximum-scale=2.0"/>
+<style>
+    div>p>a{color:#8585ff;}
+</style>
+</head>
+<body style="font-family: 雅黑;background-color: #8d8d8d;top:0;left:0;">
+<div style="width:80%;margin:5% auto 2% 10%;background-color:black;border-radius:4px;padding:16px 16px 40px 16px;;color:white;">
+    <h2>博客</h2>
+    {{#each this}}
+    <p><time>{{create_date}}</time> <a href="/blog/{{id}}" target="_blank">{{title}}</a> <small><em> {{origin}} </em></small></p>
+    {{/each}}
+</div>
+</body>
+</html>
